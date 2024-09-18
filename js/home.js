@@ -13,18 +13,15 @@ document.getElementById('btn-add-money').addEventListener('click', function (eve
     event.preventDefault();
     // S2:  Money added to the account
     const addMoneyInput = document.getElementById('input-add-money').value;
-
-
     // Get the pin number provided
     const pinNumberInput = document.getElementById('input-pin-number').value;
     console.log(addMoneyInput, pinNumberInput);
     // Step 3 pin validation (Not a valid way to validation)
-    if(pinNumberInput === '1234'){
+    if (pinNumberInput === '1234') {
         console.log('Adding money to account');
         // Step 4 : Get the current balance
         const balance = document.getElementById('account-balance').innerText;
         console.log(balance);
-
         // step 5 Add money with current balance
         const newBalance = parseFloat(balance) + parseFloat(addMoneyInput);
         console.log(newBalance);
@@ -32,7 +29,7 @@ document.getElementById('btn-add-money').addEventListener('click', function (eve
         document.getElementById('account-balance').innerText = newBalance
 
     }
-    else{
+    else {
         alert('Your pin incorrect!')
     }
 
