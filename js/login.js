@@ -17,10 +17,11 @@ document.getElementById('button-login').addEventListener('click', function (even
     console.log(pinNumber, phoneNumber);
 
     // !This is not for ultimate / perfect way 
-    if (phoneNumber === '5' && pinNumber === '1234'){
+    if (phoneNumber === '5' && pinNumber === '1234') {
         console.log('You are logged in');
+        window.location.href = '/home.html';
     }
-    else{
+    else {
         alert('Wrong phone Number or Password')
     }
 
